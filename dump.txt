@@ -3,25 +3,5 @@ digraph G {
     node [shape=record, fontname="Arial"];
     edge [color="black", fontname="Arial", fontsize=10];
 
-    n0 [label="{ <q> Love matan? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
-    n0:yes -> n1 [color="black", constraint=true];
-    n0:no -> n2 [color="black", constraint=true];
-    n2 [label="{ <q> Love physos? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
-    n2:yes -> n3 [color="black", constraint=true];
-    n2:no -> n4 [color="black", constraint=true];
-    n4 [label="{ <q> Koshka? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
-    n4:yes -> n5 [color="black", constraint=true];
-    n4:no -> n6 [color="black", constraint=true];
-    n6 [label="{ <q> unknown who? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
-    n5 [label="{ <q> Poltorashka? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
-    n3 [label="{ <q> Sliv budet? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
-    n3:yes -> n7 [color="black", constraint=true];
-    n3:no -> n8 [color="black", constraint=true];
-    n8 [label="{ <q> Holin? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
-    n7 [label="{ <q> Ovchos? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
-    n1 [label="{ <q> Lektor? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
-    n1:yes -> n9 [color="black", constraint=true];
-    n1:no -> n10 [color="black", constraint=true];
-    n10 [label="{ <q> Kalinichenko? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
-    n9 [label="{ <q> Petrovich? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
+    n0 [label="{ <q> Unknown who? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
 }
