@@ -8,7 +8,7 @@
 
 program_status_data action_request()
 {
-    char input_buffer[16];
+    char input_buffer[16] = {};
     int user_input = 0;
 
     printf(MAKE_BOLD(
@@ -21,7 +21,7 @@ program_status_data action_request()
         "Please, answer 1, 2, 3, 4 or 5\n"));
 
     if (!fgets(input_buffer, sizeof(input_buffer), stdin))
-        return PROGRAM_QUIT;
+        return request_re_entry();
 
     input_buffer[strcspn(input_buffer, "\n")] = '\0';
 
@@ -40,13 +40,14 @@ program_status_data action_request()
         case PROGRAM_QUIT:
             return PROGRAM_QUIT;
         default:
+            clear_input_buffer();
             return request_re_entry();
     }
 }
 
 program_status_data request_re_entry()
 {
-    char input_buffer[16];
+    char input_buffer[16] = {};
     int user_answer = 0;
 
     printf(MAKE_BOLD_RED(

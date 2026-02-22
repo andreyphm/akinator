@@ -9,11 +9,11 @@
 
 void guess_character(node_t* node)
 {
-    if (!node) return;
+    assert(node);
 
-    char input_buffer[16];
-    char object_buffer[100];
-    char feature_buffer[100];
+    char input_buffer[16]    = {};
+    char object_buffer[100]  = {};
+    char feature_buffer[100] = {};
 
     while (true)
     {
@@ -128,11 +128,8 @@ node_t* create_node(const char* data)
     assert(node);
 
     node->data = strdup(data);
-    if (!node->data)
-    {
-        free(node);
-        return nullptr;
-    }
+    assert(node->data);
+
     node->left = nullptr;
     node->right = nullptr;
 

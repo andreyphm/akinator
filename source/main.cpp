@@ -48,7 +48,6 @@ int main()
                 }
                 char* buffer = read_file_to_buffer(tree_txt_file);
 
-
                 if (!buffer)
                 {
                     fclose(tree_txt_file);
@@ -62,10 +61,7 @@ int main()
                 fclose(tree_txt_file);
 
                 if (new_node)
-                {
-                    free_tree(node);
                     node = new_node;
-                }
                 else
                     printf(MAKE_BOLD_RED("Failed to parse tree from file\n"));
                 break;
@@ -74,5 +70,6 @@ int main()
                 break;
         }
     }
+    free_tree(node);
     printf(MAKE_BOLD("Program completed. COMMIT GITHUB\n"));
 }

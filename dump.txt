@@ -3,5 +3,17 @@ digraph G {
     node [shape=record, fontname="Arial"];
     edge [color="black", fontname="Arial", fontsize=10];
 
-    n0 [label="{ <q> Unknown who? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
+    n0 [label="{ <q> Physics? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
+    n0:yes -> n1 [color="black", constraint=true];
+    n0:no -> n2 [color="black", constraint=true];
+    n2 [label="{ <q> Matanchik? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
+    n2:yes -> n3 [color="black", constraint=true];
+    n2:no -> n4 [color="black", constraint=true];
+    n4 [label="{ <q> Unknown who? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
+    n3 [label="{ <q> Petrovich? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
+    n1 [label="{ <q> Sliv budet? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
+    n1:yes -> n5 [color="black", constraint=true];
+    n1:no -> n6 [color="black", constraint=true];
+    n6 [label="{ <q> Holin? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
+    n5 [label="{ <q> Ovchinkin? | { <yes> YES | <no> NO } }", style=filled, fillcolor="#ffffffff"];
 }
